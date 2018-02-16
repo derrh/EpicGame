@@ -1,0 +1,6 @@
+framework module Pods_EpicGameTests {
+  umbrella header "Pods-EpicGameTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
