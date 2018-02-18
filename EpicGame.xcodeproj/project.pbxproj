@@ -14,6 +14,8 @@
 		6883B58A20375C6600D55B91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6883B58920375C6600D55B91 /* Assets.xcassets */; };
 		6883B58D20375C6600D55B91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6883B58B20375C6600D55B91 /* LaunchScreen.storyboard */; };
 		6883B59820375C6700D55B91 /* EpicGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883B59720375C6700D55B91 /* EpicGameTests.swift */; };
+		6883B5A320375F0F00D55B91 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883B5A220375F0F00D55B91 /* ViewModel.swift */; };
+		6883B5A5203770E300D55B91 /* KickstarterTestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883B5A4203770E300D55B91 /* KickstarterTestObserver.swift */; };
 		91788DDE3CCE73FCBE3DECC4 /* Pods_EpicGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CFCE03E1CEAD8301DEA9A1 /* Pods_EpicGameTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		6883B59320375C6700D55B91 /* EpicGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EpicGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6883B59720375C6700D55B91 /* EpicGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicGameTests.swift; sourceTree = "<group>"; };
 		6883B59920375C6700D55B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6883B5A220375F0F00D55B91 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6883B5A4203770E300D55B91 /* KickstarterTestObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickstarterTestObserver.swift; sourceTree = "<group>"; };
 		B3CFCE03E1CEAD8301DEA9A1 /* Pods_EpicGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EpicGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE3003CD4619BED871B7009 /* Pods_EpicGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EpicGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A806EEFE863E545A798704 /* Pods-EpicGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpicGameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EpicGameTests/Pods-EpicGameTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			children = (
 				6883B58220375C6600D55B91 /* AppDelegate.swift */,
 				6883B58420375C6600D55B91 /* ViewController.swift */,
+				6883B5A220375F0F00D55B91 /* ViewModel.swift */,
 				6883B58620375C6600D55B91 /* Main.storyboard */,
 				6883B58920375C6600D55B91 /* Assets.xcassets */,
 				6883B58B20375C6600D55B91 /* LaunchScreen.storyboard */,
@@ -104,6 +109,7 @@
 			children = (
 				6883B59720375C6700D55B91 /* EpicGameTests.swift */,
 				6883B59920375C6700D55B91 /* Info.plist */,
+				6883B5A4203770E300D55B91 /* KickstarterTestObserver.swift */,
 			);
 			path = EpicGameTests;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6883B58520375C6600D55B91 /* ViewController.swift in Sources */,
+				6883B5A320375F0F00D55B91 /* ViewModel.swift in Sources */,
 				6883B58320375C6600D55B91 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6883B59820375C6700D55B91 /* EpicGameTests.swift in Sources */,
+				6883B5A5203770E300D55B91 /* KickstarterTestObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,48 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EpicGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c36-yG-wvg">
+                                <rect key="frame" x="122.5" y="225.5" width="130" height="156"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <state key="normal" title="😀"/>
+                                <connections>
+                                    <action selector="dontTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IGb-nz-A1v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2o-fb-wAD">
+                                <rect key="frame" x="131" y="389" width="113" height="30"/>
+                                <state key="normal" title="Don't Touch Me!"/>
+                                <connections>
+                                    <action selector="dontTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9MC-Ze-Z3I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myH-yN-hpg">
+                                <rect key="frame" x="348" y="20" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="X2o-fb-wAD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="41o-xt-gDF"/>
+                            <constraint firstItem="X2o-fb-wAD" firstAttribute="top" secondItem="c36-yG-wvg" secondAttribute="bottom" constant="7.5" id="FRC-sd-4Jm"/>
+                            <constraint firstItem="c36-yG-wvg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RTb-aI-mw3"/>
+                            <constraint firstItem="myH-yN-hpg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V37-lW-SD7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="myH-yN-hpg" secondAttribute="trailing" constant="16" id="twD-DR-GOG"/>
+                            <constraint firstItem="c36-yG-wvg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-40" id="w75-9J-bnX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="outputButton" destination="c36-yG-wvg" id="SIX-tC-a6g"/>
+                        <outlet property="scoreLabel" destination="myH-yN-hpg" id="ZV6-bj-5D4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

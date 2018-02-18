@@ -7,30 +7,30 @@
 //
 
 import XCTest
+import Result
+import ReactiveSwift
 @testable import EpicGame
 
 class EpicGameTests: XCTestCase {
+  var observedScore: TestObserver<String, NoError>!
+  let vm = ViewModel()
+  
+  override func setUp() {
+    super.setUp()
+
+    observedScore = vm.outputs.score.testObserver
+  }
+  
+  func testScore() {
+    vm.inputs.buttonTapped()
+    observedScore.assertValues(["1"])
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    vm.inputs.buttonTapped()
+    observedScore.assertValues(["1", "2"])
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+    vm.inputs.buttonTapped()
+    observedScore.assertValues(["1", "2", "3"])
+  }
+  
 }
+

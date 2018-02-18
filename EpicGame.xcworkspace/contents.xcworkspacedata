@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Signal.playground">
+   </FileRef>
+   <FileRef
       location = "group:EpicGame.xcodeproj">
    </FileRef>
    <FileRef

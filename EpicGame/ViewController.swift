@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
 
 class ViewController: UIViewController {
-
+  let vm: ViewModelType = ViewModel()
+  
+  @IBOutlet weak var outputButton: UIButton!
+  @IBOutlet weak var scoreLabel: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    outputButton.reactive.title <~ vm.outputs.emoji
+    scoreLabel.reactive.text <~ vm.outputs.score
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  @IBAction func dontTouch(_ sender: Any) {
+    vm.inputs.buttonTapped()
   }
-
-
 }
 
